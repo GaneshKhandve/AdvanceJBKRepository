@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Advanced_Java.iml" filepath="$PROJECT_DIR$/Advanced_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Employee_Management/Employee_Management.iml" filepath="$PROJECT_DIR$/Employee_Management/Employee_Management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPL_2026/IPL_2026.iml" filepath="$PROJECT_DIR$/IPL_2026/IPL_2026.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zoamto_app/Zoamto_app.iml" filepath="$PROJECT_DIR$/Zoamto_app/Zoamto_app.iml" />
+    </modules>
+  </component>
+</project>
