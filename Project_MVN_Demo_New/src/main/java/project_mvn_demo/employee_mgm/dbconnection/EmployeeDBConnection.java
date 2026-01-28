@@ -1,7 +1,6 @@
 package project_mvn_demo.employee_mgm.dbconnection;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 public class EmployeeDBConnection {
     public static Connection getEmpDbConnection(){
@@ -19,5 +18,19 @@ public class EmployeeDBConnection {
         }
         return connection;
 
+    }
+
+    public static void cleanup(Connection con, PreparedStatement st, ResultSet rs) {
+        try {
+            // 7.Release the Resources
+            if (rs != null)
+                rs.close();
+            if (st != null)
+                st.close();
+            if (con != null)
+                con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

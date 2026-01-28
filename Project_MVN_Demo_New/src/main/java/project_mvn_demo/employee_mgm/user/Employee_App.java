@@ -55,7 +55,7 @@ public class Employee_App {
         higeexp.forEach(System.out::println);
 
         int emp_Id =2;
-        int salary = 50000;
+        int salary = 45000;
         System.out.println("Update the Salary of Employee by Emp Id " + emp_Id);
         boolean update = ec.updateSalaryById(emp_Id,salary);
         if (update){

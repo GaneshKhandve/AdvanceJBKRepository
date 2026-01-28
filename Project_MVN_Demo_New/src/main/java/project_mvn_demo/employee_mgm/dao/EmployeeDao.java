@@ -38,6 +38,9 @@ public class EmployeeDao {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        finally {
+            EmployeeDBConnection.cleanup(con,st,rs);
+        }
         return employeeList;
 
     }
@@ -51,7 +54,7 @@ public class EmployeeDao {
             st.setInt(2,empId);
 
             int ack  = st.executeUpdate();
-            if (ack > 0){
+            if (ack>0){
                 return true;
 
             }
@@ -59,6 +62,10 @@ public class EmployeeDao {
         }
         catch (Exception e) {
             throw new RuntimeException(e);
+        }
+
+        finally {
+            EmployeeDBConnection.cleanup(con,st,rs);
         }
 
 
@@ -83,6 +90,9 @@ public class EmployeeDao {
         }
         catch (Exception e) {
             throw new RuntimeException(e);
+        }
+        finally {
+            EmployeeDBConnection.cleanup(con,st,rs);
         }
 
 

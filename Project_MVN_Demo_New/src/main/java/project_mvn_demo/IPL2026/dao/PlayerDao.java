@@ -39,6 +39,9 @@ public class PlayerDao {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        finally {
+            IPLDBConnection.cleanup(con,st,rs);
+        }
         return playersList;
     }
 
@@ -59,6 +62,9 @@ public class PlayerDao {
         }
         catch (Exception e) {
             throw new RuntimeException(e);
+        }
+        finally {
+            IPLDBConnection.cleanup(con,st,rs);
         }
 
 
@@ -85,6 +91,9 @@ public class PlayerDao {
         catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
+        finally {
+            IPLDBConnection.cleanup(con,st,rs);
+        }
 
 
         return false;
@@ -103,6 +112,9 @@ public class PlayerDao {
         }
         catch (Exception e) {
             throw new RuntimeException(e.getMessage());
+        }
+        finally {
+            IPLDBConnection.cleanup(con,st,rs);
         }
 
 
